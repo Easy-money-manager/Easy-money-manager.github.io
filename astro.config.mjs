@@ -6,5 +6,5 @@ export default defineConfig({
 	devToolbar: {
 		enabled: false,
 	},
-	site: "https://easy-money-manager.github.io",
+	site: "https://easy-money-manager.com",
 });
