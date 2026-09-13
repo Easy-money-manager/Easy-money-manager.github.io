@@ -1,8 +1,6 @@
 ---
+import Layout from "../layouts/Layout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
-import "../styles/global.css";
-
-const year = new Date().getFullYear();
 const projects = [
     {
         name: "Easy Money Manager",
@@ -24,49 +22,27 @@ const projects = [
     },
 ];
 ---
+<Layout title="Easy Money Manager">
+<section class="hero">
+	<h1>Easy Money Manager</h1>
 
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>Easy Money Manager</title>
+	<p>Open-source software for personal finance and financial tools.</p>
+</section>
 
-    </head>
+<section>
+	<h2>Projects</h2>
 
-    <body>
-        <nav>
-            <strong>EMM</strong>
-
-            <a href="https://github.com/easy-money-manager">GitHub</a>
-        </nav>
-
-        <main>
-            <section class="hero">
-                <h1>Easy Money Manager</h1>
-
-                <p>Open-source software for personal finance, later also economic analysis, and financial tools.</p>
-            </section>
-
-			<section>
-				<h2>Projects</h2>
-
-				<div class="projects">
-					{
-					projects.map((project) => (
-					<ProjectCard
-					name={project.name}
-					description={project.description}
-					href={project.href}
-					status={project.status}
-					/>
-					))
-					}
-				</div>
-			</section>
-        </main>
-		<footer>
-			    © {year} Easy Money Manager
-		</footer>
-    </body>
-</html>
+	<div class="projects">
+		{
+		projects.map((project) => (
+		<ProjectCard
+		name={project.name}
+		description={project.description}
+		href={project.href}
+		status={project.status}
+		/>
+		))
+		}
+	</div>
+</section>
+</Layout>
