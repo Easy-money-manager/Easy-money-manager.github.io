@@ -178,6 +178,11 @@ main {
         0 0 30px rgba(30, 160, 100, 0.08);
 }
 
+.logo {
+    height: 60px;
+    width: auto;
+}
+
 footer {
 	text-align: center;
 }
